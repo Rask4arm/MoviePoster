@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_PAGE_MAIN = "page_main";
     private static final String TAG_PAGE_FAVORITES = "page_favorites";
     private static final String TAG_PAGE_CONTACT = "page_contact";
+    private static final String TAG_PAGE_STILL = "page_still"; //still image tag
 
     //drawer the side menu inside it, and the bottom bar.
     private DrawerLayout drawerLayout;
@@ -116,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
                     .add(R.id.fragmentContainer, new PostersFragment(), TAG_PAGE_MAIN)
                     .add(R.id.fragmentContainer, new FavoritesFragment(), TAG_PAGE_FAVORITES)
                     .add(R.id.fragmentContainer, new ContactFragment(), TAG_PAGE_CONTACT)
+                    .add(R.id.fragmentContainer, new StillFragment(), TAG_PAGE_STILL) //adds still image page
                     .commitNow();
         } else {
             currentPageId = savedInstanceState.getInt(KEY_CURRENT_PAGE, R.id.nav_main);
@@ -148,8 +150,8 @@ public class MainActivity extends AppCompatActivity {
         // replace) keeps each page alive, with its scroll position and selections.
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        String visibleTag = tagForPage(pageId);
-        for (String tag : new String[]{TAG_PAGE_MAIN, TAG_PAGE_FAVORITES, TAG_PAGE_CONTACT}) {
+        String visibleTag = tagForPage(pageId); //added still image to the list
+        for (String tag : new String[]{TAG_PAGE_MAIN, TAG_PAGE_FAVORITES, TAG_PAGE_CONTACT, TAG_PAGE_STILL}) {
             Fragment page = fragmentManager.findFragmentByTag(tag);
             if (page == null) {
                 continue;
@@ -189,6 +191,8 @@ public class MainActivity extends AppCompatActivity {
             return TAG_PAGE_FAVORITES;
         } else if (pageId == R.id.nav_contact) {
             return TAG_PAGE_CONTACT;
+        } else if (pageId == R.id.nav_still) { //added the still image page
+            return TAG_PAGE_STILL;
         }
         return TAG_PAGE_MAIN;
     }

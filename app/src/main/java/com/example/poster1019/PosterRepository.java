@@ -120,44 +120,58 @@ public class PosterRepository {
         }
     }
 
+    /**
+     * Creates all the posters
+     *
+     * @return List of posters created
+     */
     private static List<Posters> createPosters() {
         List<Posters> posters = new ArrayList<>();
 
-        Posters the100 = new Posters();
-        the100.id = "vietnam";
-        the100.image = R.drawable.poster3;
-        the100.name = "Vietnam Movie";
-        the100.rating = 5f;
-        the100.createdBy = "Cuong Ngo";
-        the100.story = "This is an Vietnam Movie with a young lady";
-        posters.add(the100);
+        Posters theAvengers = new Posters();
+        theAvengers.id = "theAvengers";
+        theAvengers.image = R.drawable.the_avengers;
+        theAvengers.name = "The Avengers";
+        theAvengers.rating = 5f;
+        theAvengers.createdBy = "Marvel";
+        theAvengers.story = "This is a story about superheroes fighting to save earth";
+        posters.add(theAvengers);
 
-        Posters chineseMovie = new Posters();
-        chineseMovie.id = "chinese";
-        chineseMovie.image = R.drawable.poster4;
-        chineseMovie.name = "Chinese Movie";
-        chineseMovie.rating = 4f;
-        chineseMovie.createdBy = "Zhang San";
-        chineseMovie.story = "This is an Chinese Movie with a young lady.";
-        posters.add(chineseMovie);
+        Posters dune = new Posters();
+        dune.id = "Dune";
+        dune.image = R.drawable.dune;
+        dune.name = "Dune";
+        dune.rating = 4.5f;
+        dune.createdBy = "Frank Herbert";
+        dune.story = "The original Space-Opera";
+        posters.add(dune);
 
-        Posters japanMovie = new Posters();
-        japanMovie.id = "japanese";
-        japanMovie.image = R.drawable.poster1;
-        japanMovie.name = "Japanese Movie";
-        japanMovie.rating = 3f;
-        japanMovie.createdBy = "Juzo Itami";
-        japanMovie.story = "This is an Japanese Movie.";
-        posters.add(japanMovie);
+        Posters avatar = new Posters();
+        avatar.id = "Avatar";
+        avatar.image = R.drawable.avatar;
+        avatar.name = "Avatar";
+        avatar.rating = 5f;
+        avatar.createdBy = "James Cameron";
+        avatar.story = "This is the story of humans invading an alien planet";
+        posters.add(avatar);
 
-        Posters americanMovie = new Posters();
-        americanMovie.id = "american";
-        americanMovie.image = R.drawable.poster2;
-        americanMovie.name = "American Movie";
-        americanMovie.rating = 5f;
-        americanMovie.createdBy = "Tim Burton";
-        americanMovie.story = "This is an American Movie.";
-        posters.add(americanMovie);
+        Posters jaws = new Posters();
+        jaws.id = "Jaws";
+        jaws.image = R.drawable.jaws;
+        jaws.name = "Jaws";
+        jaws.rating = 4f;
+        jaws.createdBy = "Peter Benchley";
+        jaws.story = "This is the story of a shark";
+        posters.add(jaws);
+
+        Posters joker = new Posters();
+        joker.id = "Joker";
+        joker.image = R.drawable.joker;
+        joker.name = "Joker";
+        joker.rating = 5f;
+        joker.createdBy = "Todd Phillips";
+        joker.story = "This is a movie about the Joker from Batman";
+        posters.add(joker);
 
         return posters;
 
