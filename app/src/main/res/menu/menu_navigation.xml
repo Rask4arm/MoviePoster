@@ -12,7 +12,7 @@
             android:icon="@drawable/ic_mail"
             android:title="@string/nav_contact"/>
         <item android:id="@+id/nav_still"
-            android:icon="@drawable/ic_mail"
+            android:icon="@drawable/ic_still"
             android:title="@string/nav_still"/>
     </group>
 

@@ -181,7 +181,10 @@ public class MainActivity extends AppCompatActivity {
             return R.string.title_favorites;
         } else if (pageId == R.id.nav_contact) {
             return R.string.title_contact;
+        } else if (pageId == R.id.nav_still) {
+            return R.string.nav_still;
         }
+
         return R.string.posters;
     }
 
